@@ -513,12 +513,12 @@ if __name__ == "__main__":
     sim = SinglePendulumSimulationRL()
     
     # Train the model with better parameters (uncomment to train)
-    rewards = sim.train(episodes=500, batch_size=128, target_update=5)
-    sim.plot_training_progress(rewards)
-    sim.save_model('pendulum_rl_final_model.pt')
+    # rewards = sim.train(episodes=1000, batch_size=256, target_update=1)
+    # sim.plot_training_progress(rewards)
+    # sim.save_model('pendulum_rl_final_model.pt')
     
-    # # Load a pre-trained model if available
-    # sim.load_model('pendulum_rl_best_model.pt')
+    # Load a pre-trained model if available
+    sim.load_model('pendulum_rl_final_model.pt')
     
     # Run the trained agent
     print("Running simulation with the trained agent...")
